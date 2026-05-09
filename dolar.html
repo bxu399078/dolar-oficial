@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dólar Oficial</title>
+    <style>
+        /* ... tus estilos CSS ... */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">💵</div>
+        <h1>Cotización Dólar Oficial</h1>
+        <button id="btn-consultar">Consultar ahora</button>
+        <pre id="output">Presioná el botón para ver la cotización...</pre>
+        <div class="footer">Banco Nación Argentina</div>
+    </div>
+
+    <!-- Definir el hook onRuntimeInitialized antes de cargar dolar.js -->
+    <script>
+        var Module = {
+            onRuntimeInitialized: function() {
+                // El runtime ya está listo y el DOM está cargado.
+                // Ahora podemos ejecutar main() de forma segura.
+                Module.callMain();
+            }
+        };
+    </script>
+    <script src="dolar.js"></script>
+</body>
+</html>
